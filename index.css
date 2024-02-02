@@ -1,0 +1,182 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #46279c;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left,
+.right {
+    max-width: 500px;
+    padding: 20px;
+    height: 100vh;
+    max-height: 600px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.left {
+    flex-grow: 1;
+    max-height: 550px;
+    background-color: #186ff8;
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left img{
+    width: 100%;
+    transform: rotate(-10deg);
+}
+
+.right {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f2f2f2;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right .linha {
+    border-top: solid 1px rgb(201, 199, 199);
+}
+
+.right .topo .container-title h1 {
+    color: #000;
+}
+.right .topo .container-title{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.right .topo .container-title span{
+    height: 30px;
+    width: 50px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+    transition: .5s;
+}
+.right .topo p {
+    color: gray;
+}
+
+.right .info h2,
+.right .info p {
+    color: gray;
+    line-height: 20px;
+}
+
+.right .color h2 {
+    color: gray;
+}
+
+.right .color .btns {
+    display: flex;
+    column-gap: 15px;
+}
+
+.right .color .btns button,
+.right .color .btns button div {
+    width: 25px;
+    height: 25px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.right .color .btns button {
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.right .color .btns .selected {
+    padding: 5px;
+    transform: scale(0.6);
+}
+
+.right .color .btns button:hover {
+    opacity: 0.5;
+}
+
+.right .topo,
+.right .info,
+.right .color,
+.right .size {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    color: gray;
+}
+
+.right .size .btns {
+    display: flex;
+    column-gap: 20px;
+}
+
+.right .size .btns button {
+    height: 30px;
+    width: 30px;
+    background-color: #e7e7e7;
+    border: none;
+    transition: .5s;
+    border-radius: 5px;
+    color: gray;
+    cursor: pointer;
+}
+
+.right .size .btns .selectedBtnSize {
+    color: #fff;
+}
+
+.right .add-car {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+
+.right .add-car button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0px 10px;
+    background-color: #186ff8;
+    border: none;
+    color: #fff;
+    min-width: 200px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.right .add-car button:hover {
+    opacity: 0.6;
+}
+
+.right .add-car span {
+    font-weight: bold;
+    font-size: 25px;
+    color: gray;
+}
+
+@media (max-width: 1050px) {
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .left img{
+        transform: rotate(0deg);
+    }
+}
